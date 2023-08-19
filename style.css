@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 :root{
     --bg-body:hsl(0, 0%, 8%);
     --bg-contact: hsl(0, 0%, 14%);
@@ -29,8 +31,37 @@ body{
     font-size: var(--fs-18 );
     line-height: 1.56;
 }
+a{
+    display: inline-block;
+}
+a:hover{
+    color: var(--accent);
+}
+a:hover > svg > path {
+    fill: var(--accent);
+}
 .wrapper{
     width: calc(100% - 2rem);
     max-width: var(--container);
     margin-inline: auto;
+}
+
+/* 600px */
+@media (min-width:37.5rem){  
+    .wrapper{
+        width: calc(100% - 3.75rem);
+    }
+}
+
+/* Header */
+
+.header{
+
+}
+
+.header__home{
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.02vw + 2.04, 2rem);
+    color: var(--text1);
+    text-decoration: none;
 }
